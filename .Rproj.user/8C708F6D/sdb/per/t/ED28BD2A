@@ -1,0 +1,17 @@
+{
+    "contents" : "require(Hmisc)\ncreateCalendarTable<-\n  function(years, mo=NULL, q=NULL){\n    response<-\n      merge(month.abb, years, all=T);\n    \n    names(response)<-\n      c(\"month\", \"year\");\n    \n    qtr<-\n      c(1,1,1,2,2,2,3,3,3,4,4,4);\n    \n    wkday<-\n      c(\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\", \"Sat\", \"Sun\");\n    \n    response$month.nbr<-\n      match(response$month, month.abb);\n    \n    day<-c();\n    month.nbr<-c();\n    year<-c();\n    quarter<-c();\n    month<-c();\n    wday<-c();\n    wday.nbr<-c();\n    wk.nbr<-c();\n    \n    #expand response to have one row for every calendar day\n    for(i in 1:nrow(response)){\n      dt<-\n        as.Date(paste(response$year[i], response$month.nbr[i], \"1\", sep=\"-\"));\n      \n      nbr<-\n        monthDays(dt);\n      \n      month.nbr<-\n        c(month.nbr, rep(response$month.nbr[i],nbr));\n      \n      month<-\n        c(month, rep(month.abb[response$month.nbr[i]], nbr));\n      \n      year<-\n        c(year, rep(response$year[i], nbr));\n      \n      quarter<-\n        c(quarter, rep(qtr[response$month.nbr[i]], nbr));\n      \n      day<-\n        c(day, 1:nbr);\n    }\n    \n    response<-\n      data.frame(year, quarter, month, month.nbr, day);\n    \n    #Determin the week information for each day\n    for(i in 1:nrow(response)){\n      dt<-\n        as.Date(paste(response$year[i], response$month.nbr[i], response$day[i], sep=\"-\"));\n      \n      w<-\n        weekdays(dt, abbreviate=TRUE);\n      \n      wn<-\n        match(w, wkday);\n      \n      wday<-\n        c(wday, w);\n      \n      wday.nbr<-\n        c(wday.nbr, wn);\n      \n      if(response$day[i]==1){\n        nbr<-1;\n      } else if(wn==1){\n        nbr<-nbr+1;\n      }\n      \n      wk.nbr<-\n        c(wk.nbr, nbr);\n        \n    }\n    \n    response<-\n      cbind(response, wday, wday.nbr, wk.nbr);\n    \n    #factors for ggplot facets\n    \n    response$monthf<-\n      factor(response$month, levels=month.abb, ordered=TRUE);\n    \n    response$wdayf<-\n      factor(response$wday, levels=wkday, ordered=TRUE);\n    \n    if(!is.null(q)){\n      response<-\n        response[response$quarter == q, ];\n    }\n    \n    if(!is.null(mo)){\n      response<-\n        response[response$month == mo, ];\n    }\n    \n    return(response);\n}",
+    "created" : 1445559425371.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1483983682",
+    "id" : "ED28BD2A",
+    "lastKnownWriteTime" : 1445561290,
+    "path" : "~/GitHub/Rcalendar/R/createCalendarTable.R",
+    "project_path" : "R/createCalendarTable.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

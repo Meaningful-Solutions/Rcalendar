@@ -1,0 +1,17 @@
+{
+    "contents" : "require(ggplot2);\nggcal<-\n  function(years, mo=NULL, q=NULL){\n    cal<-\n      createCalendarTable(years=years, mo=mo, q=q);\n    \n    gg<-\n      ggplot( cal );\n    \n    gg<-\n      (gg\n       + geom_rect(aes(xmin=wday.nbr, xmax=wday.nbr+1, ymin=wk.nbr*-1, ymax=(wk.nbr*-1)+1), color=\"white\")\n       + scale_x_continuous( label=\"\", breaks=NULL)\n       + scale_y_continuous( label=\"\", breaks=NULL)\n       + facet_grid(monthf ~ year)\n        );\n    \n    return(gg);\n  }",
+    "created" : 1445560820279.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "726502622",
+    "id" : "BA0C621E",
+    "lastKnownWriteTime" : 1445561321,
+    "path" : "~/GitHub/Rcalendar/R/ggcal.R",
+    "project_path" : "R/ggcal.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
