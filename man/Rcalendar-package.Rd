@@ -3,39 +3,39 @@
 \alias{Rcalendar}
 \docType{package}
 \title{
-What the package does (short line)
-~~ package title ~~
+R package for plotting calendars
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
+Plot data on a calendar
 }
 \details{
 \tabular{ll}{
 Package: \tab Rcalendar\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.1\cr
 Date: \tab 2015-10-22\cr
-License: \tab What license is it under?\cr
+License: \tab Apache 2.0\cr
 }
 ~~ An overview of how to use the package, including the most important functions ~~
 }
 \author{
-Who wrote it
+Bill -Chopper- Genne
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
+Maintainer: Developer <developer@meaningful-solutions.com>
+
 }
 \references{
-~~ Literature or other references for background information ~~
+
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation ~~
-~~ directory ~~
 \keyword{ package }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+
 }
 \examples{
-~~ simple examples of the most important functions ~~
+#plot a calendar
+ggcal(years=2014:2016);
+
+#table used to build the calendar plot
+cal<-createCalendarTable(2014:2016);
+
 }

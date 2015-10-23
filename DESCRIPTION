@@ -1,9 +1,9 @@
 Package: Rcalendar
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: R package for plotting calendars
+Version: 0.1
 Date: 2015-10-22
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Bill -Chopper- Genne
+Maintainer: Developer <developer@meaningful-solutions.com>
+Description: Plot data on a calendar
+License: Apache 2.0

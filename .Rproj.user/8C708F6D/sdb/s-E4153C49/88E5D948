@@ -1,0 +1,16 @@
+{
+    "contents" : "\\name{Rcalendar-package}\n\\alias{Rcalendar-package}\n\\alias{Rcalendar}\n\\docType{package}\n\\title{\nR package for plotting calendars\n}\n\\description{\nPlot data on a calendar\n}\n\\details{\n\\tabular{ll}{\nPackage: \\tab Rcalendar\\cr\nType: \\tab Package\\cr\nVersion: \\tab 0.1\\cr\nDate: \\tab 2015-10-22\\cr\nLicense: \\tab Apache 2.0\\cr\n}\n~~ An overview of how to use the package, including the most important functions ~~\n}\n\\author{\nBill -Chopper- Genne\n\nMaintainer: Developer <developer@meaningful-solutions.com>\n\n}\n\\references{\n\n}\n\\keyword{ package }\n\\seealso{\n\n}\n\\examples{\n#plot a calendar\nggcal(years=2014:2016);\n\n#table used to build the calendar plot\ncal<-createCalendarTable(2014:2016);\n\n}\n",
+    "created" : 1445568222592.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1880321350",
+    "id" : "88E5D948",
+    "lastKnownWriteTime" : 1445568845,
+    "path" : "~/GitHub/Rcalendar/man/Rcalendar-package.Rd",
+    "project_path" : "man/Rcalendar-package.Rd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
