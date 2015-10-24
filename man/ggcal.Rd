@@ -45,7 +45,7 @@ Optional. The integer for a quarter which will limit the result to the 3 months 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\url{http://meaningful-solutions.com}
 }
 \examples{
 gc<-ggcal(2014:2016);

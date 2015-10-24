@@ -25,11 +25,11 @@ Maintainer: Developer <developer@meaningful-solutions.com>
 
 }
 \references{
-
+  
 }
 \keyword{ package }
 \seealso{
-
+  \url{http://meaningful-solutions.com}
 }
 \examples{
 #plot a calendar

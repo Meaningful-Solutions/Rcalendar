@@ -7,3 +7,7 @@ Author: Bill -Chopper- Genne
 Maintainer: Developer <developer@meaningful-solutions.com>
 Description: Plot data on a calendar
 License: Apache 2.0
+URL: http://meaningful-solutions.com
+Depends:
+  ggplot2,
+  Hmisc
