@@ -8,7 +8,7 @@ Create a calendar plot using ggplot2
 Returns a calendar as ggplot2 object.
 }
 \usage{
-ggcal(years, mo = NULL, q = NULL)
+ggcal(years, mo = NULL, q = NULL, print.days=F)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -20,6 +20,9 @@ Optional. The 3 character abbreviation in month.abb, which will limit the result
 }
   \item{q}{
 Optional. The integer for a quarter which will limit the result to the 3 months in the specified quarter.
+}
+  \item{print.days}{
+Optional. Determines whether days of the month are printed on the plot.
 }
 }
 \details{
