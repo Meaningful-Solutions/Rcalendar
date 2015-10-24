@@ -44,6 +44,6 @@ Temporary Items
 
 #R project files
 .Rhistory
-.Rproj
+Rcalendar.Rproj
 .Rproj.user
 .RData
